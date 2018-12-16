@@ -69,15 +69,12 @@ int main() {
     cout << __LINE__ << " " << sub5.id() << endl;//7
     cout << __LINE__ << " " << Identifiable::get_current_id_counter() << endl;//8
 
-    sleep(1);
+//    sleep(1);
     //why this is multi-thread
-//    pub.AddClient(&sub1);
-//    pub.AddClient(&sub2);
-//    pub.AddClient(&sub3);
-//    pub.AddClient(&sub4);
+    pub.AddClient(&sub1);
+    pub.AddClient(&sub2);
 
 //    sleep(2);
-    //    cout<<Identifiable::get_current_id_counter()<<endl;
-//    pub.ShareDataWithAllClients(pub.getData());
+    pub.ShareDataWithAllClients(pub.getData());
     return 0;
 }
